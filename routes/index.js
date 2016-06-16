@@ -23,7 +23,7 @@ router.get('/posts', function(req, res, next) {
 // Create new post
 router.post('/posts', function(req, res, next) {
 	var post = new Post(req.body);
-	
+	console.log(req.body);
 	post.save(function(err, post) {
 		if(err) { return next(err); }
 		
